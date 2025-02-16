@@ -51,20 +51,20 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100">
+    <div className="min-h-screen relative overflow-hidden bg-[#000000]">
       {/* Dynamic background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/20 blur-[100px]" />
-        <div className="absolute left-60 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-secondary/20 blur-[100px]" />
-        <div className="absolute right-60 bottom-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 blur-[100px]" />
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/10 blur-[100px]" />
+        <div className="absolute left-60 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-secondary/10 blur-[100px]" />
+        <div className="absolute right-60 bottom-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/10 blur-[100px]" />
       </div>
 
       {/* Header with glassmorphism */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-white/60 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
         <div className="container max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
+            <h2 className="text-2xl font-bold text-gradient-gold">
               xAi
             </h2>
             <div className="flex items-center gap-4">
@@ -73,7 +73,7 @@ const Index = () => {
               <Button 
                 variant="ghost" 
                 onClick={handleSignOut}
-                className="text-gray-600 hover:text-gray-900 transition-all duration-200 hover:scale-105"
+                className="text-primary hover:text-accent transition-all duration-200 hover:scale-105"
               >
                 <LogOut className="w-5 h-5 mr-2" />
                 Sign Out
@@ -87,12 +87,12 @@ const Index = () => {
         <div className="space-y-12 animate-fade-in">
           <div className="text-center space-y-6">
             <h1 className="text-6xl font-bold tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
+              <span className="text-gradient-gold">
                 xAi Dashboard
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              <span className="bg-gradient-to-r from-white/60 to-white/95 p-6 rounded-2xl border border-white/20 shadow-lg backdrop-blur-md inline-block">
+            <p className="text-xl text-primary/80 max-w-2xl mx-auto leading-relaxed">
+              <span className="glass-gold inline-block p-6 rounded-2xl">
                 Revolutionizing AI workflows through unified automation and intelligent operations
               </span>
             </p>
