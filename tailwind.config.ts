@@ -26,19 +26,19 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#B8860B", // Dark golden color
+          DEFAULT: "#7C3AED", // Vibrant violet
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#1A1F2C", // Deep navy/black
+          DEFAULT: "#06B6D4", // Cyan
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#D4AF37", // Metallic gold
+          DEFAULT: "#F471B5", // Pink
           foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#4A4A4A", // Soft black
+          DEFAULT: "#94A3B8", // Slate
           foreground: "#ffffff",
         },
       },
@@ -90,10 +90,6 @@ export default {
         "fade-in": "fade-in 0.3s ease-out",
         gradient: "gradient 15s ease infinite",
         "gradient-x": "gradient-x 15s ease infinite",
-      },
-      backgroundImage: {
-        'gradient-gold': 'linear-gradient(45deg, #B8860B, #D4AF37, #FFD700)',
-        'gradient-dark': 'linear-gradient(45deg, #1A1F2C, #2A2F3C, #3A3F4C)',
       },
     },
   },

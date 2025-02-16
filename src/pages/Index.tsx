@@ -51,20 +51,20 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-[#222222]">
-      {/* Subtle grid and glow effects */}
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100">
+      {/* Dynamic background elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:14px_24px]" />
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/5 blur-[120px]" />
-        <div className="absolute left-60 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/5 blur-[120px]" />
-        <div className="absolute right-60 bottom-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/5 blur-[120px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/20 blur-[100px]" />
+        <div className="absolute left-60 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-secondary/20 blur-[100px]" />
+        <div className="absolute right-60 bottom-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 blur-[100px]" />
       </div>
 
-      {/* Premium header with subtle glass effect */}
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-black/30 backdrop-blur-xl">
+      {/* Header with glassmorphism */}
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-white/60 backdrop-blur-xl">
         <div className="container max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-gradient-gold">
+            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
               xAi
             </h2>
             <div className="flex items-center gap-4">
@@ -73,7 +73,7 @@ const Index = () => {
               <Button 
                 variant="ghost" 
                 onClick={handleSignOut}
-                className="text-primary hover:text-accent transition-all duration-200 hover:scale-105"
+                className="text-gray-600 hover:text-gray-900 transition-all duration-200 hover:scale-105"
               >
                 <LogOut className="w-5 h-5 mr-2" />
                 Sign Out
@@ -85,22 +85,22 @@ const Index = () => {
 
       <main className="relative container max-w-4xl mx-auto px-4 py-12">
         <div className="space-y-12 animate-fade-in">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-6">
             <h1 className="text-6xl font-bold tracking-tight">
-              <span className="text-gradient-gold">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
                 xAi Dashboard
               </span>
             </h1>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-              <span className="premium-card inline-block p-6 rounded-2xl">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              <span className="bg-gradient-to-r from-white/60 to-white/95 p-6 rounded-2xl border border-white/20 shadow-lg backdrop-blur-md inline-block">
                 Revolutionizing AI workflows through unified automation and intelligent operations
               </span>
             </p>
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 rounded-2xl transform rotate-1" />
-            <div className="absolute inset-0 bg-gradient-to-r from-accent/5 via-transparent to-primary/5 rounded-2xl transform -rotate-1" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 rounded-2xl transform rotate-1" />
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-primary/10 rounded-2xl transform -rotate-1" />
             <div className="relative">
               <WorkflowInput onSubmit={handleWorkflowSubmit} />
             </div>
