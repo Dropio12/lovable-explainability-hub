@@ -52,17 +52,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/30 to-accent/20 animate-gradient" />
+      {/* Animated background with softer gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/15 to-accent/10 animate-gradient" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-pulse" />
+      {/* Decorative elements with professional feel */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-20">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-40 right-40 w-48 h-48 bg-accent/20 rounded-full blur-2xl animate-pulse" />
       </div>
 
-      {/* Header/Navigation */}
-      <header className="relative border-b border-white/10 backdrop-blur-sm bg-white/30">
+      {/* Header with modern glass effect */}
+      <header className="relative border-b border-white/20 backdrop-blur-md bg-white/40">
         <div className="container max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
@@ -74,7 +75,7 @@ const Index = () => {
               <Button 
                 variant="ghost" 
                 onClick={handleSignOut}
-                className="text-gray-600 hover:text-gray-900"
+                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
               >
                 <LogOut className="w-5 h-5 mr-2" />
                 Sign Out
@@ -88,12 +89,12 @@ const Index = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="text-center space-y-4">
             <div className="inline-block">
-              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
+              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x pb-2">
                 Workflow Dashboard
               </h1>
-              <div className="h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent mt-2 rounded-full" />
+              <div className="h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent mt-2 rounded-full opacity-80" />
             </div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed backdrop-blur-sm bg-white/30 p-4 rounded-lg">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed backdrop-blur-sm bg-white/40 p-6 rounded-xl border border-white/20 shadow-lg">
               Revolutionizing squad-level health command operations through unified AI workflows and intelligent automation
             </p>
           </div>

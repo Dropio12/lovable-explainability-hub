@@ -26,19 +26,19 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#6366F1", // Indigo
+          DEFAULT: "#9b87f5", // Muted purple
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#A855F7", // Purple
+          DEFAULT: "#8B5CF6", // Vivid purple
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#EC4899", // Pink
+          DEFAULT: "#D946EF", // Magenta pink
           foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#9CA3AF",
+          DEFAULT: "#8E9196", // Professional gray
           foreground: "#ffffff",
         },
       },
