@@ -51,22 +51,20 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Animated background with softer gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/15 to-accent/10 animate-gradient" />
-      
-      {/* Decorative elements with professional feel */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-40 right-40 w-48 h-48 bg-accent/20 rounded-full blur-2xl animate-pulse" />
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100">
+      {/* Dynamic background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/20 blur-[100px]" />
+        <div className="absolute left-60 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-secondary/20 blur-[100px]" />
+        <div className="absolute right-60 bottom-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 blur-[100px]" />
       </div>
 
-      {/* Header with modern glass effect */}
-      <header className="relative border-b border-white/20 backdrop-blur-md bg-white/40">
+      {/* Header with glassmorphism */}
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-white/60 backdrop-blur-xl">
         <div className="container max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
+            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
               MetaAligner SquadOps
             </h2>
             <div className="flex items-center gap-4">
@@ -75,7 +73,7 @@ const Index = () => {
               <Button 
                 variant="ghost" 
                 onClick={handleSignOut}
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                className="text-gray-600 hover:text-gray-900 transition-all duration-200 hover:scale-105"
               >
                 <LogOut className="w-5 h-5 mr-2" />
                 Sign Out
@@ -86,20 +84,27 @@ const Index = () => {
       </header>
 
       <main className="relative container max-w-4xl mx-auto px-4 py-12">
-        <div className="space-y-8 animate-fade-in">
-          <div className="text-center space-y-4">
-            <div className="inline-block">
-              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x pb-2">
+        <div className="space-y-12 animate-fade-in">
+          <div className="text-center space-y-6">
+            <h1 className="text-6xl font-bold tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
                 Workflow Dashboard
-              </h1>
-              <div className="h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent mt-2 rounded-full opacity-80" />
-            </div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed backdrop-blur-sm bg-white/40 p-6 rounded-xl border border-white/20 shadow-lg">
-              Revolutionizing squad-level health command operations through unified AI workflows and intelligent automation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              <span className="bg-gradient-to-r from-white/60 to-white/95 p-6 rounded-2xl border border-white/20 shadow-lg backdrop-blur-md inline-block">
+                Revolutionizing squad-level health command operations through unified AI workflows and intelligent automation
+              </span>
             </p>
           </div>
 
-          <WorkflowInput onSubmit={handleWorkflowSubmit} />
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 rounded-2xl transform rotate-1" />
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-transparent to-primary/10 rounded-2xl transform -rotate-1" />
+            <div className="relative">
+              <WorkflowInput onSubmit={handleWorkflowSubmit} />
+            </div>
+          </div>
           
           {results && <WorkflowResults results={results} />}
         </div>
