@@ -1,10 +1,11 @@
+
 import React, { useState } from 'react';
 import { WorkflowInput } from '../components/WorkflowInput';
 import { WorkflowResults } from '../components/WorkflowResults';
 import { useToast } from '../hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { LogOut, Settings, Bell } from 'lucide-react';
+import { LogOut } from 'lucide-react';
 import { SettingsDialog } from '@/components/SettingsDialog';
 import { NotificationsDialog } from '@/components/NotificationsDialog';
 
@@ -64,7 +65,7 @@ const Index = () => {
       <header className="relative border-b border-white/10 backdrop-blur-sm bg-white/30">
         <div className="container max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient-x">
+            <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
               MetaAligner SquadOps
             </h2>
             <div className="flex items-center gap-4">
