@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { WorkflowInput } from '../components/WorkflowInput';
 import { WorkflowResults } from '../components/WorkflowResults';
@@ -6,6 +5,8 @@ import { useToast } from '../hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, Settings, Bell } from 'lucide-react';
+import { SettingsDialog } from '@/components/SettingsDialog';
+import { NotificationsDialog } from '@/components/NotificationsDialog';
 
 const Index = () => {
   const [results, setResults] = useState<any>(null);
@@ -67,12 +68,8 @@ const Index = () => {
               MetaAligner SquadOps
             </h2>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" size="icon">
-                <Bell className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Settings className="w-5 h-5" />
-              </Button>
+              <NotificationsDialog />
+              <SettingsDialog />
               <Button 
                 variant="ghost" 
                 onClick={handleSignOut}
