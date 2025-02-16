@@ -65,7 +65,7 @@ const Index = () => {
         <div className="container max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
-              MetaAligner SquadOps
+              xAi
             </h2>
             <div className="flex items-center gap-4">
               <NotificationsDialog />
@@ -88,12 +88,12 @@ const Index = () => {
           <div className="text-center space-y-6">
             <h1 className="text-6xl font-bold tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
-                Workflow Dashboard
+                xAi Dashboard
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               <span className="bg-gradient-to-r from-white/60 to-white/95 p-6 rounded-2xl border border-white/20 shadow-lg backdrop-blur-md inline-block">
-                Revolutionizing squad-level health command operations through unified AI workflows and intelligent automation
+                Revolutionizing AI workflows through unified automation and intelligent operations
               </span>
             </p>
           </div>
