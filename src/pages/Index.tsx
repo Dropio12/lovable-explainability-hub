@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import { WorkflowInput } from '../components/WorkflowInput';
 import { WorkflowResults } from '../components/WorkflowResults';
 import { useToast } from '../hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { LogOut, Settings, Bell } from 'lucide-react';
 
 const Index = () => {
   const [results, setResults] = useState<any>(null);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleWorkflowSubmit = async (workflow: string, userId: string) => {
     try {
@@ -36,6 +40,14 @@ const Index = () => {
     }
   };
 
+  const handleSignOut = () => {
+    toast({
+      title: "Signed out successfully",
+      description: "See you next time!",
+    });
+    navigate('/login');
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Animated background */}
@@ -47,12 +59,39 @@ const Index = () => {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="relative container max-w-4xl mx-auto px-4 py-12">
+      {/* Header/Navigation */}
+      <header className="relative border-b border-white/10 backdrop-blur-sm bg-white/30">
+        <div className="container max-w-7xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-gray-900">
+              MetaAligner SquadOps
+            </h2>
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" size="icon">
+                <Bell className="w-5 h-5" />
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Settings className="w-5 h-5" />
+              </Button>
+              <Button 
+                variant="ghost" 
+                onClick={handleSignOut}
+                className="text-gray-600 hover:text-gray-900"
+              >
+                <LogOut className="w-5 h-5 mr-2" />
+                Sign Out
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="relative container max-w-4xl mx-auto px-4 py-12">
         <div className="space-y-8 animate-fade-in">
           <div className="text-center space-y-4">
             <div className="inline-block">
               <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
-                MetaAligner SquadOps
+                Workflow Dashboard
               </h1>
               <div className="h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent mt-2 rounded-full" />
             </div>
@@ -65,7 +104,7 @@ const Index = () => {
           
           {results && <WorkflowResults results={results} />}
         </div>
-      </div>
+      </main>
     </div>
   );
 };
