@@ -64,10 +64,32 @@ export default {
             opacity: "1",
           },
         },
+        gradient: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
+        "gradient-x": {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "left center",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "right center",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
+        gradient: "gradient 15s ease infinite",
+        "gradient-x": "gradient-x 15s ease infinite",
       },
     },
   },

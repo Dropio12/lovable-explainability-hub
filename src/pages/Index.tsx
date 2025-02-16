@@ -37,15 +37,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="container max-w-4xl mx-auto px-4 py-12">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/30 to-accent/20 animate-gradient" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-30">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-pulse" />
+      </div>
+
+      <div className="relative container max-w-4xl mx-auto px-4 py-12">
         <div className="space-y-8 animate-fade-in">
-          <div className="text-center space-y-2">
-            <h1 className="text-4xl font-bold text-gray-900">
-              MetaAligner SquadOps Dashboard
-            </h1>
-            <p className="text-lg text-gray-600">
-              This dashboard executes a unified AI workflow for squad-level health command operations.
+          <div className="text-center space-y-4">
+            <div className="inline-block">
+              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
+                MetaAligner SquadOps
+              </h1>
+              <div className="h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent mt-2 rounded-full" />
+            </div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed backdrop-blur-sm bg-white/30 p-4 rounded-lg">
+              Revolutionizing squad-level health command operations through unified AI workflows and intelligent automation
             </p>
           </div>
 
